@@ -4095,9 +4095,7 @@
                 }
             },
             "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
+               
                 "psr-4": {
                     "Symfony\\Polyfill\\Ctype\\": ""
                 }
@@ -4174,9 +4172,6 @@
                 }
             },
             "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
                 "psr-4": {
                     "Symfony\\Polyfill\\Intl\\Grapheme\\": ""
                 }
@@ -4342,9 +4337,7 @@
                 }
             },
             "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
+               
                 "psr-4": {
                     "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
                 },
@@ -4506,9 +4499,7 @@
                 }
             },
             "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
+            
                 "psr-4": {
                     "Symfony\\Polyfill\\Php72\\": ""
                 }
@@ -4666,9 +4657,7 @@
                 }
             },
             "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
+               
                 "psr-4": {
                     "Symfony\\Polyfill\\Php83\\": ""
                 },

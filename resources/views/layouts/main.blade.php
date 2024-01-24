@@ -73,6 +73,7 @@
             </p>
         </div>
     </footer>
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
-<script src="{{ url('js/app.js') }}"></script>
+
 </html>

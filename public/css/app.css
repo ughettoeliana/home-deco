@@ -7,6 +7,7 @@
 }
 
 body {
+    background-color: #f7f6f5;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -15,8 +16,6 @@ body {
 main {
     flex: 1;
 }
-
-
 
 /*  NAVBAR styles */
 
@@ -50,9 +49,7 @@ main {
     text-decoration: none;
 }
 
-
 /* FOOTER styles */
-
 
 .footer {
     background-color: #f4f2f1;
@@ -77,7 +74,6 @@ main {
     font-weight: 700;
 }
 
-
 /* HOME styles */
 
 .banner {
@@ -91,27 +87,32 @@ main {
     justify-content: center;
 }
 
-.banner .button-container {
+/* BUTTON styles */
+
+.banner .base-button-container {
     margin-top: 6rem;
+}
+
+.base-button-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.banner .banner-button {
+.base-button {
     height: 40px;
     padding: 0.4rem;
     background-color: white;
     border: 1px solid black;
 }
 
-.banner .banner-button:hover {
+.base-button:hover {
     color: white;
     background-color: black;
     cursor: pointer;
 }
 
-.info-container{
+.info-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -119,45 +120,99 @@ main {
     text-align: center;
 }
 
-.info-container .container{
+.info-container .container {
     max-width: 50%;
 }
 
-.font-display{
+.font-display {
     font-family: "Noto Serif Display", serif;
     font-size: 2.5rem;
 }
 
-.text-lightGray{
+.text-lightGray {
     color: #a6a6a5;
 }
 
-.arrow-container{
+.arrow-container {
     margin: 3rem 0 5rem;
 }
 
-.black-text{
+.black-text {
     color: black;
 }
 
-.link{
+.link {
     text-decoration: none;
 }
 
-.categories-container .categories{
+.categories-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.categories-container .categories {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
 }
 
-.categories-container .categories .categories-link{
+.categories-container .categories .categories-link {
     text-decoration: none;
     color: #a6a6a5;
     font-family: "Noto Serif Display", serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    line-height: 1.5em;
 }
 
-.categories-container .categories .categories-link:hover{
+.categories-container .categories .categories-link:hover {
     color: black;
 }
+
+.categories-container .image-container {
+    max-width: 350px;
+    margin-left: 4rem;
+}
+
+.categories-container .image-container img {
+    width: 100%;
+}
+
+.products-container {
+    margin-top: 5rem;
+}
+
+.new-products {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+}
+
+.new-products .product {
+    margin-top: 1rem;
+    margin-right: 2rem;
+    max-width: 200px;
+    padding: 1rem;
+    background-color: white;
+}
+
+.img-container {
+    max-width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+}
+
+.new-products .product .img-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ABOUT PAGE styles */
+
