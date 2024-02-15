@@ -23,7 +23,7 @@
             </div>
             <div class="links-container">
                 <a class="links-link" href="{{ route('home') }}">HOME</a>
-                <a class="links-link" href="{{ route('home') }}">ABOUT</a>
+                <a class="links-link" href="{{ route('about') }}">ABOUT</a>
                 <a class="links-link" href="{{ route('home') }}">SHOP</a>
                 <a class="links-link" href="{{ route('home') }}">COLLECTION</a>
                 <a class="links-link" href="{{ route('home') }}">BLOG</a>
