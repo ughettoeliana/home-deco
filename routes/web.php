@@ -18,3 +18,6 @@ Route::get('/', [\App\Http\Controllers\HomeController::class, 'home'])
     
 Route::get('/about', [\App\Http\Controllers\HomeController::class, 'about'])
     ->name('about');
+
+Route::get('/admin', [\App\Http\Controllers\AdminController::class, 'dashboard'])
+    ->name('admin');

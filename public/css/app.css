@@ -184,6 +184,31 @@ main {
     margin-top: 5rem;
 }
 
+/* ADMIN dashboard navbar styles  */
+
+.admin-body {
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+    width: 200px; /* Adjust width as needed */
+    background-color: #bab3a9;
+}
+
+aside .admin-links-container .admin-links-link {
+    padding: 0.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+.admin-main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* NEW products styles */
+
 .new-products {
     display: flex;
     flex-direction: row;
@@ -204,8 +229,8 @@ main {
     max-width: 200px;
     height: 200px;
     display: flex;
-    justify-content: center; 
-    align-items: center;   
+    justify-content: center;
+    align-items: center;
 }
 
 .new-products .product .img-container img {
@@ -213,6 +238,4 @@ main {
     height: auto;
 }
 
-
 /* ABOUT PAGE styles */
-
