@@ -15,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'home'])
     ->name('home');
-    
-Route::get('/about', [\App\Http\Controllers\HomeController::class, 'about'])
-    ->name('about');
+
+Route::get('/products', [\App\Http\Controllers\ProductsController::class, 'index'])
+    ->name('products');
+
+Route::get('/products/{id}', [\App\Http\Controllers\ProductsController::class, 'view']);
 
 Route::get('/admin', [\App\Http\Controllers\AdminController::class, 'dashboard'])
     ->name('admin');
