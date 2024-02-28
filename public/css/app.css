@@ -220,7 +220,7 @@ aside .admin-links-container .admin-links-link {
 .new-products .product {
     margin-top: 1rem;
     margin-right: 2rem;
-    max-width: 200px;
+    max-width: 300px;
     padding: 1rem;
     background-color: white;
 }
@@ -236,6 +236,24 @@ aside .admin-links-container .admin-links-link {
 .new-products .product .img-container img {
     max-width: 100%;
     height: auto;
+}
+
+.product-details{
+    margin-top: 1em;
+}
+
+.bold-text{
+    font-weight: bold;
+}
+
+.base-button-container{
+    margin-top: 1em;
+}
+
+.product-details-container{
+    max-width: 300px;
+    margin-right: 0.5em;
+    text-align: left;
 }
 
 /* ABOUT PAGE styles */
