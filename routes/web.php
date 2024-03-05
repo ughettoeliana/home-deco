@@ -19,7 +19,12 @@ Route::get('/', [\App\Http\Controllers\HomeController::class, 'home'])
 Route::get('/products', [\App\Http\Controllers\ProductsController::class, 'index'])
     ->name('products');
 
-Route::get('/products/{id}', [\App\Http\Controllers\ProductsController::class, 'view']);
+Route::get('/products/new', [\App\Http\Controllers\ProductsController::class, 'createProduct'])->name('products.createProduct');
+
+Route::post('/products/new', [\App\Http\Controllers\ProductsController::class, 'processNewProduct'])->name('products.processNewProduct');
+
+Route::get('/products/{id}', [\App\Http\Controllers\ProductsController::class, 'view'])->name('products.view')
+    ->whereNumber('id');
 
 Route::get('/admin', [\App\Http\Controllers\AdminController::class, 'dashboard'])
-    ->name('admin');
+    ->name('admin.dashboard');

@@ -18,13 +18,13 @@
     
     <aside>
         <ul class="admin-links-container">
-          <li><a class="admin-links-link" href="#">Dashboard</a></li>
+          <li><a class="admin-links-link" href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+          <li><a class="admin-links-link" href="{{ route('products.createProduct') }}">Create a new product</a></li>
           <li><a class="admin-links-link" href="#">Users</a></li>
           <li><a class="admin-links-link" href="#">Settings</a></li>
         </ul>
       </aside>
     <main class="admin-main">
-        <h1>Administration Panel</h1>
         @yield('main')
     </main>
     <script src="{{ asset('js/app.js') }}"></script>

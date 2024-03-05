@@ -10,7 +10,7 @@ class ProductsController extends Controller
     public function index()
     {
         $products = Product::all();
-        return view('product.products', [
+        return view('products.products', [
             'products' => $products,
         ]);
     }
@@ -18,8 +18,16 @@ class ProductsController extends Controller
     {
         $product = Product::findOrFail($id);
 
-        return view('product.view', [
+        return view('products.view', [
             'product' => $product,
         ]);
+    }
+    public function createProduct()
+    {
+        return view('products.create-product');
+    }
+    public function processNewProduct()
+    {
+        echo 'Recibiendo los datos :)';
     }
 }
