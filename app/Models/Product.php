@@ -33,5 +33,13 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Product extends Model
 {
-protected $table = 'products';
+    protected $table = 'products';
+    protected $fillable = [
+        'name',
+        'category',
+        'description',
+        'price',
+        'img',
+        'img_description'
+    ];
 }

@@ -26,8 +26,21 @@ class ProductsController extends Controller
     {
         return view('products.create-product');
     }
-    public function processNewProduct()
+    public function processNewProduct(Request $request)
     {
-        echo 'Recibiendo los datos :)';
+        $data = $request->except('_token');
+        $request->validate([
+            'name' => 'required|min:2',
+            'price' => 'required|numeric',
+            'description' => 'required|min:2',
+            'img' => 'min:2',
+            'img-description' => 'min:2',
+            'category' => 'required|min:2',
+        ]);
+
+        Product::create($data);
+        return  redirect()
+            ->route('products')
+            ->with('message.success', 'El producto ' . '"' . e($data['name']) . '"' . ' se creo exitosamente.');
     }
 }
