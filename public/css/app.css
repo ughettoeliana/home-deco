@@ -192,12 +192,12 @@ main {
 }
 
 aside {
-    width: 200px; 
+    width: 200px;
     background-color: #bab3a9;
     padding-top: 20px;
 }
 
-aside .admin-links-container{
+aside .admin-links-container {
     line-height: 2rem;
 }
 
@@ -243,19 +243,19 @@ aside .admin-links-container .admin-links-link {
     height: auto;
 }
 
-.product-details{
+.product-details {
     margin-top: 1em;
 }
 
-.bold-text{
+.bold-text {
     font-weight: bold;
 }
 
-.base-button-container{
+.base-button-container {
     margin-top: 1em;
 }
 
-.product-details-container{
+.product-details-container {
     max-width: 300px;
     margin-right: 0.5em;
     text-align: left;
@@ -263,7 +263,7 @@ aside .admin-links-container .admin-links-link {
 
 /* Create new Product Form styles */
 
-.text-center{
+.text-center {
     text-align: center;
 }
 
@@ -275,7 +275,9 @@ label {
     display: block;
     margin-bottom: 5px;
 }
-input[type="text"], input[type="number"], textarea {
+input[type="text"],
+input[type="number"],
+textarea {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -288,7 +290,7 @@ select {
     box-sizing: border-box;
 }
 input[type="submit"] {
-    background-color: #BA6A52;
+    background-color: #ba6a52;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -296,5 +298,33 @@ input[type="submit"] {
     cursor: pointer;
 }
 input[type="submit"]:hover {
-    background-color: #D0846E;
+    background-color: #d0846e;
+}
+
+/* ALERT styles */
+
+.alert {
+    padding: 15px;
+    background-color: #d4edda; /* Green color */
+    color: #155724; /* Dark green color */
+    border: 1px solid #c3e6cb; /* Border color */
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/* Close button style */
+.closebtn {
+    margin-left: 15px;
+    color: #155724;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.text-danger {
+    padding-bottom: 1.02em;
+    color: red;
 }

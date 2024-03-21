@@ -36,6 +36,13 @@
         </nav>
     </header>
     <main>
+        @if (Session::has('message.success'))
+        <div class="alert">
+            <strong>{!! Session::get('message.success') !!}</strong>
+          </div>
+            <alert></alert>
+        @endif
+
         @yield('main')
     </main>
     <footer class="footer">
