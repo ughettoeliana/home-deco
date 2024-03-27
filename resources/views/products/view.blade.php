@@ -7,24 +7,12 @@
 
 @section('main')
     <div class='info-container'>
-        <div class="new-products">
-            <div class="product">
-                <div class="img-container">
-                    <img src="{{ url('assets/art-lamp.png') }}" alt="white art lamp">
-                </div>
-            </div>
-            <div class="product-details-container">
-                <h1>{{ $product->name }}</h1>
-                <div class="product-details">
-                    <p class="bold-text">$ {{ $product->price }}</p>
-                    <br>
-                    <p>{{ $product->description }}</p>
-                </div>
-                <div class="base-button-container">
-                    <button class="base-button">Add to cart</button>
-                </div>
-            </div>
-            
+        <h1 class="">Product Details</h1>
+        {{-- @include('products._product-data') --}}
+        <x-product-data :product="$product"/>
+        
+        <div class="base-button-container">
+            <a class="base-button">Add to cart</a>
         </div>
     </div>
 

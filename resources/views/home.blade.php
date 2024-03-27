@@ -20,7 +20,7 @@
                     who are satistied with our products</p>
             </div>
             <div class="arrow-container">
-                <a href="about" class="black-text">About us <i class="fa-solid fa-arrow-right" style="color: #000000;"></i>
+                <a href="about" class="text-black">About us <i class="fa-solid fa-arrow-right" style="color: #000000;"></i>
                 </a>
             </div>
         </div>

@@ -25,8 +25,8 @@
                         <button class="base-button">Add to cart</button>
                     </div>
                     <div class="base-button-container">
-                        <button class="delete-button"><a class='link text-white'
-                                href="{{ route('products.confirmDelete', ['id' => $product->id]) }}">Delete</a></button>
+                        <a class="base-button delete-button"
+                                href="{{ route('products.confirmDelete', ['id' => $product->id]) }}">Delete</a>
                     </div>
                 </div>
             @endforeach

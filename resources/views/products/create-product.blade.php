@@ -23,7 +23,7 @@
             @enderror
             <label for="price">Price:</label>
             <input type="number" id="price" name="price" min="0.01" value="{{ old('price') }}" step="0.01"
-             @error('price') aria-describedby="error-price" @enderror>
+                @error('price') aria-describedby="error-price" @enderror>
 
 
             @error('price')
@@ -58,8 +58,10 @@
 
             <label for="img-description">Image Description:</label>
             <input type="text" id="img-description" name="img-description" value="{{ old('img-description') }}">
-
-            <button type="submit" class="submit-button">Submit</button>
+            
+                <div class="text-center">
+                    <button type="submit" class="base-button submit-button">Submit</button>
+                </div>
         </form>
     </div>
 @endsection
