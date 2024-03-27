@@ -42,4 +42,26 @@ class Product extends Model
         'img',
         'img_description'
     ];
+
+    public static function validationRules(): array
+    {
+        return [
+            'name' => 'required|min:2',
+            'price' => 'required|numeric',
+            'description' => 'required|min:2',
+            'img' => 'min:2',
+            'img-description' => 'min:2',
+            'category' => 'required|min:2',
+        ];
+    }
+
+    public static function validationMessages(): array
+    {
+        return [
+            'name.required' => 'The product must have a name',
+            'name.min' => 'The product name must have at least :min caracters',
+            'price.required' => 'The product must have a price',
+            'price.numeric' => 'The product price must be numeric ',
+        ];
+    }
 }
