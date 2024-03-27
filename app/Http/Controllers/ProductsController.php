@@ -44,6 +44,24 @@ class ProductsController extends Controller
             ->with('message.success', 'The product ' . '"' . e($data['name']) . '"' . ' has been successfully created.');
     }
 
+    public function formEdit($id)
+    {
+        $product = Product::findOrFail($id);
+
+        return view('products.confirmDelete', [
+            'product' => $product,
+        ]);
+    }
+
+    public function processEdit($id)
+    {
+        $product = Product::findOrFail($id);
+
+        return  redirect()
+            ->route('products')
+            ->with('message.success', 'The product ' . '"' . e($product['name']) . '"' . ' has been successfully edited.');
+    }
+
     public function confirmDelete($id)
     {
         $product = Product::findOrFail($id);

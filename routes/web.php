@@ -29,6 +29,14 @@ Route::get('/products/{id}', [\App\Http\Controllers\ProductsController::class, '
     ->name('products.view')
     ->whereNumber('id');
 
+Route::get('/products/{id}/edit', [\App\Http\Controllers\ProductsController::class, 'confirmEdit'])
+    ->name('products.formEdit')
+    ->whereNumber('id');
+
+Route::post('/products/{id}/edit', [\App\Http\Controllers\ProductsController::class, 'processEdit'])
+    ->name('products.processEdit')
+    ->whereNumber('id');
+
 Route::get('/products/{id}/delete', [\App\Http\Controllers\ProductsController::class, 'confirmDelete'])
     ->name('products.confirmDelete')
     ->whereNumber('id');
