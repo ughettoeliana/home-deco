@@ -1,4 +1,4 @@
-<?php 
+<?php
 /** @var \App\Models\Product[] \Illuminate\Database\Eloquent\Collection $products */
 ?>
 @extends('layouts.main')
@@ -12,19 +12,23 @@
         </div>
         <div class="new-products">
             @foreach ($products as $product)
-            <div class="product">
-                <div class="img-container">
-                    <img src="{{ url('assets/art-lamp.png') }}" alt="white art lamp">
+                <div class="product">
+                    <div class="img-container">
+                        <img src="{{ url('assets/art-lamp.png') }}" alt="white art lamp">
+                    </div>
+                    <div class="product-details">
+                        <p class="bold-text">{{ $product->name }}</p>
+                        <p>$ {{ $product->price }}</p>
+                        <a href="{{ route('products.view', ['id' => $product->id]) }}">See more</a>
+                    </div>
+                    <div class="base-button-container">
+                        <button class="base-button">Add to cart</button>
+                    </div>
+                    <div class="base-button-container">
+                        <button class="delete-button"><a class='link text-white'
+                                href="{{ route('products.confirmDelete', ['id' => $product->id]) }}">Delete</a></button>
+                    </div>
                 </div>
-                <div class="product-details">
-                    <p class="bold-text">{{ $product->name}}</p>
-                    <p>$ {{ $product->price}}</p>
-                    <a href="{{ route('products.view', ['id' => $product->id]) }}">See more</a>
-                </div>
-                <div class="base-button-container">
-                    <button class="base-button">Add to cart</button>
-                </div>
-            </div>
             @endforeach
         </div>
     </div>

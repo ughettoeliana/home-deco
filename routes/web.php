@@ -19,11 +19,22 @@ Route::get('/', [\App\Http\Controllers\HomeController::class, 'home'])
 Route::get('/products', [\App\Http\Controllers\ProductsController::class, 'index'])
     ->name('products');
 
-Route::get('/products/new', [\App\Http\Controllers\ProductsController::class, 'createProduct'])->name('products.createProduct');
+Route::get('/products/new', [\App\Http\Controllers\ProductsController::class, 'createProduct'])
+    ->name('products.createProduct');
 
-Route::post('/products/new', [\App\Http\Controllers\ProductsController::class, 'processNewProduct'])->name('products.processNewProduct');
+Route::post('/products/new', [\App\Http\Controllers\ProductsController::class, 'processNewProduct'])
+    ->name('products.processNewProduct');
 
-Route::get('/products/{id}', [\App\Http\Controllers\ProductsController::class, 'view'])->name('products.view')
+Route::get('/products/{id}', [\App\Http\Controllers\ProductsController::class, 'view'])
+    ->name('products.view')
+    ->whereNumber('id');
+
+Route::get('/products/{id}/delete', [\App\Http\Controllers\ProductsController::class, 'confirmDelete'])
+    ->name('products.confirmDelete')
+    ->whereNumber('id');
+
+Route::post('/products/{id}/delete', [\App\Http\Controllers\ProductsController::class, 'processDelete'])
+    ->name('products.processDelete')
     ->whereNumber('id');
 
 Route::get('/admin', [\App\Http\Controllers\AdminController::class, 'dashboard'])

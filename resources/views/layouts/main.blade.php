@@ -37,7 +37,7 @@
     </header>
     <main>
         @if (Session::has('message.success'))
-        <div class="alert">
+        <div class="alert text-center">
             <strong>{!! Session::get('message.success') !!}</strong>
           </div>
             <alert></alert>
