@@ -49,9 +49,9 @@ class Product extends Model
             'name' => 'required|min:2',
             'price' => 'required|numeric',
             'description' => 'required|min:2',
-            'img' => 'min:2',
-            'img-description' => 'min:2',
-            'category' => 'required|min:2',
+            'img' => '',
+            'img-description' => '',
+            'category' => 'required',
         ];
     }
 
@@ -62,6 +62,8 @@ class Product extends Model
             'name.min' => 'The product name must have at least :min caracters',
             'price.required' => 'The product must have a price',
             'price.numeric' => 'The product price must be numeric ',
+            'description.required' => 'The product must have a description',
+            'description.min' => 'The product name must have at least :min caracters',
         ];
     }
 }
