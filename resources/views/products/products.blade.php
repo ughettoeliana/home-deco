@@ -25,6 +25,10 @@
                         <button class="base-button">Add to cart</button>
                     </div>
                     <div class="base-button-container">
+                        <a class="base-button edit-button"
+                                href="{{ route('products.formUpdate', ['id' => $product->id]) }}">Edit</a>
+                    </div>
+                    <div class="base-button-container">
                         <a class="base-button delete-button"
                                 href="{{ route('products.confirmDelete', ['id' => $product->id]) }}">Delete</a>
                     </div>

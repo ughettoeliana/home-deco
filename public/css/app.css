@@ -400,3 +400,9 @@ select {
     align-items: center;
     gap: 20px;
 }
+
+/* Edit Button */
+
+.edit-button{
+    background-color: #cccc;
+}
