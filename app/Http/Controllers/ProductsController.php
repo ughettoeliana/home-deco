@@ -8,8 +8,6 @@ use App\Models\Product;
 class ProductsController extends Controller
 {
 
-
-
     public function index()
     {
         $products = Product::all();
@@ -29,7 +27,7 @@ class ProductsController extends Controller
 
     public function createProduct()
     {
-        return view('products.create-product');
+        return view('products.form-new');
     }
 
     public function processNewProduct(Request $request)
@@ -44,18 +42,21 @@ class ProductsController extends Controller
             ->with('message.success', 'The product ' . '"' . e($data['name']) . '"' . ' has been successfully created.');
     }
 
-    public function formEdit($id)
+    public function formUpdate($id)
     {
-        $product = Product::findOrFail($id);
-
-        return view('products.confirmDelete', [
-            'product' => $product,
+        return view('products.form-update', [
+            'product' => Product::findOrFail($id),
         ]);
     }
 
-    public function processEdit($id)
+    public function processUpdate(Request $request,$id)
     {
         $product = Product::findOrFail($id);
+
+        $request->validate(Product::validationRules(), Product::validationMessages());
+        $data = $request->except('_token');
+
+        $product->update($data);
 
         return  redirect()
             ->route('products')
@@ -64,10 +65,8 @@ class ProductsController extends Controller
 
     public function confirmDelete($id)
     {
-        $product = Product::findOrFail($id);
-
-        return view('products.confirmDelete', [
-            'product' => $product,
+        return view('products.delete', [
+            'product' =>  Product::findOrFail($id),
         ]);
     }
 

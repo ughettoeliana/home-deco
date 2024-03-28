@@ -50,7 +50,7 @@ class Product extends Model
             'price' => 'required|numeric',
             'description' => 'required|min:2',
             'img' => '',
-            'img-description' => '',
+            'img_description' => '',
             'category' => 'required',
         ];
     }

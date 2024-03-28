@@ -56,8 +56,8 @@
             <label for="image">Image URL:</label>
             <input type="text" id="image" name="image">
 
-            <label for="img-description">Image Description:</label>
-            <input type="text" id="img-description" name="img-description" value="{{ old('img-description') }}">
+            <label for="img_description">Image Description:</label>
+            <input type="text" id="img_description" name="img_description" value="{{ old('img_description') }}">
             
                 <div class="text-center">
                     <button type="submit" class="base-button submit-button">Submit</button>
