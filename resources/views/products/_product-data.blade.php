@@ -3,10 +3,16 @@
 ?>
 
 <div class="products">
-    <div class="product">
-        <div class="img-container">
-            <img src="{{ url('assets/art-lamp.png') }}" alt="white art lamp">
-        </div>
+    <div>
+        @if ($product->img !== null && file_exist(url('imgs/' . $product->img)))
+            <div class="img-container">
+                <img src="{{ file_exist(url('imgs/' . $product->img)) }}" alt="{{ $product->img_description }}">
+            </div>
+        @else
+            <div class="img-container">
+                <img src="{{ url('assets/no-image.jpeg') }}" alt="not image">
+            </div>
+        @endif
     </div>
     <div class="product-details-container">
         <h2>{{ $product->name }}</h2>
