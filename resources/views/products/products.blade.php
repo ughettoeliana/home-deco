@@ -7,15 +7,13 @@
 
 @section('main')
     <div class='info-container'>
-        <div class="products-container">
-            <h2 class="font-display">Check out this products</h2>
-        </div>
+            <h1 class="font-display">Check out this products</h1>
         <div class="new-products">
             @foreach ($products as $product)
                 <div class="product">
-                    <div class="img-container">
-                        <img src="{{ url('assets/art-lamp.png') }}" alt="white art lamp">
-                    </div>
+
+                    <x-product-image :product="$product"/>
+
                     <div class="product-details">
                         <p class="bold-text">{{ $product->name }}</p>
                         <p>$ {{ $product->price }}</p>

@@ -7,8 +7,8 @@
 
 @section('main')
     <div class='info-container'>
-        <h1 class="">Product Details</h1>
-        {{-- @include('products._product-data') --}}
+        <h1>Product Details</h1>
+
         <x-product-data :product="$product"/>
         
         <div class="base-button-container">
