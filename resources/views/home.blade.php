@@ -4,13 +4,16 @@
 
 @section('main')
     <div class="banner">
+        <div  class="banner-title">
+            <h1>Discover a modern interior <span class="dark-green-text">design for you</span></h1>
+        </div>
         <div class="base-button-container">
             <button class="base-button">Check new collection</button>
         </div>
     </div>
     <div class='info-container'>
         <div class="container">
-            <h1 class="font-display">We create interior products by today's standars</h1>
+            <h2 class="font-display">We create interior products by today's standars</h2>
             <br />
             <div>
                 <p class="text-lightGray">Furnne is a brand that creates furniture of the highest quality with natural and
@@ -40,7 +43,7 @@
             </div>
         </div>
 
-        <div class="products-container">
+        <div class="new-products-section">
             <p>New collection 2023</p>
             <h2 class="font-display">You must own this products</h2>
             <br />
