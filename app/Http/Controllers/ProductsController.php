@@ -36,6 +36,10 @@ class ProductsController extends Controller
 
         $request->validate(Product::validationRules(), Product::validationMessages());
 
+        if ($request->hasFile('image')) {
+            $data['img'] = $this->uploadImage($request);
+        }
+
         Product::create($data);
         return  redirect()
             ->route('products')
@@ -49,12 +53,17 @@ class ProductsController extends Controller
         ]);
     }
 
-    public function processUpdate(Request $request,$id)
+    public function processUpdate(Request $request, $id)
     {
         $product = Product::findOrFail($id);
 
-        $request->validate(Product::validationRules(), Product::validationMessages());
         $data = $request->except('_token');
+
+        $request->validate(Product::validationRules(), Product::validationMessages());
+
+        if ($request->hasFile('image')) {
+            $data['img'] = $this->uploadImage($request);
+        }
 
         $product->update($data);
 
@@ -79,5 +88,26 @@ class ProductsController extends Controller
         return  redirect()
             ->route('products')
             ->with('message.success', 'The product ' . '"' . e($product['name']) . '"' . ' has been deleted successfully.');
+    }
+
+    /**
+     * Guarda la imagen de la peticion y retorna el nombre generado.
+     *
+     * @param request $request
+     * @return string
+     *
+     */
+
+    protected function uploadImage(Request $request): string
+    {
+        $img = $request->file('image');
+        $name = $request->input('name');
+
+        $imgName = date('YmdHis_') . \Str::slug($name) . "." . $img->guessExtension();
+
+
+        $img->move(public_path('imgs'), $imgName);
+
+        return $imgName;
     }
 }
